@@ -28,8 +28,6 @@ namespace SampleDatabaseWalkthrough
 							Console.WriteLine("  Order {0}: {1} {2}", order.OrderId, order.OrderQuantity, order.OrderDate.Value.ToShortDateString());
 						}
 						
-						// some comment test for github ;)
-
 						//Console.WriteLine("  Customer: {0}", customer.Dump());
 
 						////Console.WriteLine("order count = {0}", customer.Orders.Count());

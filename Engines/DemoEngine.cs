@@ -35,8 +35,8 @@ namespace Engines
 
 			foreach (var customer in customerSet)
 			{
-				_Logger.InfoFormat("CustomerId: {name} ({id}) - {company}", customer.ContactName, customer.CustomerId, customer.CompanyName);
 				var orderSet = _OrderRepository.GetByCustomerId(customer.CustomerId);
+				_Logger.InfoFormat("CustomerId: {name} ({id}) - {company}, Order Count = {orderCount}", customer.ContactName, customer.CustomerId, customer.CompanyName, orderSet.Count());
 				foreach (var order in orderSet)
 				{
 					_Logger.InfoFormat("  - order ({id}): {quantity}, {date}", order.OrderId, order.OrderQuantity, order.OrderDate);
