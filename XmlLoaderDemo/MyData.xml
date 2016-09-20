@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+	<Customers>
+		<Customer CustomerId="1" CompanyName="ENSI" ContactName="Nicolas" Phone="1234567" />
+		<Customer CustomerId="2" CompanyName="Microsoft" ContactName="Bill" Phone="5555555" />
+		<Customer CustomerId="3" CompanyName="Lidl" ContactName="Wurst" Phone="245433" />
+	</Customers>
+	<Orders>
+		<Order OrderId="1" CustomerId="3" OrderDate="" OrderQuantity="123" />
+		<Order OrderId="2" CustomerId="1" OrderDate="1.2.2016" OrderQuantity="1" />
+		<Order OrderId="3" CustomerId="3" OrderDate="1.3.2016" OrderQuantity="2" />
+		<Order OrderId="4" CustomerId="2" OrderDate="1.4.2016" OrderQuantity="33" />
+		<Order OrderId="5" CustomerId="2" OrderDate="1.5.2016" OrderQuantity="4" />
+		<Order OrderId="6" CustomerId="3" OrderDate="1.6.2016" OrderQuantity="" />
+		<Order OrderId="6" CustomerId="1" OrderDate="" OrderQuantity="" />
+	</Orders>
+</Data>
