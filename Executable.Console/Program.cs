@@ -41,26 +41,6 @@ namespace Executable.Console
 					Ensure.That(demoEngine, "demoEngine").IsNotNull();
 
 					demoEngine.Execute();
-
-					//var dataRepositoryFactory = scope.Resolve<IDataRepositoryFactory>();
-					//Ensure.That(dataRepositoryFactory, "dataRepositoryFactory").IsNotNull();
-
-					//ICustomerRepository customerRepository = dataRepositoryFactory.GetDataRepository<ICustomerRepository>();
-					//IOrderRepository orderRepository = dataRepositoryFactory.GetDataRepository<IOrderRepository>();
-					//Ensure.That(customerRepository, "customerRepository").IsNotNull();
-					//Ensure.That(orderRepository, "orderRepository").IsNotNull();
-
-					//var customerSet = customerRepository.Get();
-
-					//foreach (var customer in customerSet)
-					//{
-					//	_Logger.InfoFormat("CustomerId: {name} ({id}) - {company}", customer.ContactName, customer.CustomerId, customer.CompanyName);
-					//	var orderSet = orderRepository.GetByCustomerId(customer.CustomerId);
-					//	foreach (var order in orderSet)
-					//	{
-					//		_Logger.InfoFormat("  - order ({id}): {quantity}, {date}", order.OrderId, order.OrderQuantity, order.OrderDate);
-					//	}
-					//}
 				}
 			}
 			catch (Exception ex)
