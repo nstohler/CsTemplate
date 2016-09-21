@@ -19,7 +19,7 @@ namespace Bootstrapper
 		{
 			_Logger.Info("HostBootstrapperService.CTOR");
 
-			// other initializations gp here...
+			// other initializations go here...
 
 			_AutofacContainer = InitializeAutofacContainer(builder =>
 			{

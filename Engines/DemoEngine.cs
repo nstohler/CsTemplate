@@ -39,7 +39,7 @@ namespace Engines
 				_Logger.InfoFormat("CustomerId: {name} ({id}) - {company}, Order Count = {orderCount}", customer.ContactName, customer.CustomerId, customer.CompanyName, orderSet.Count());
 				foreach (var order in orderSet)
 				{
-					_Logger.InfoFormat("  - order ({id}): {quantity}, {date}", order.OrderId, order.OrderQuantity, order.OrderDate);
+					_Logger.InfoFormat("  - order ({id}): {quantity}, {date}", order.OrderId, order.OrderQuantity, order.OrderDate?.ToShortDateString());
 				}
 			}
 
