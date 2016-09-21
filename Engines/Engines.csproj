@@ -48,6 +48,10 @@
       <Project>{bccf92b1-6ed6-452a-b87c-dcf57123a66e}</Project>
       <Name>AppConfiguration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{D8133425-1A3D-4CF4-98D5-C52EE5C8FA5F}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data.Model\Data.Model.csproj">
       <Project>{f398423a-c026-4080-9a6c-37a7700fb9f7}</Project>
       <Name>Data.Model</Name>

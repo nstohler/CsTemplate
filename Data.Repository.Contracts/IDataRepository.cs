@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Data.Repository.Contracts
 {
-	public interface IDataRepository
-	{
-	}
+	//public interface IDataRepository
+	//{
+	//}
 
-	public interface IDataRepository<T> : IDataRepository
-		where T : class, new()
-	{
+	//public interface IDataRepository<T> : IDataRepository
+	//	where T : class, new()
+	//{
 
-	}
+	//}
 }

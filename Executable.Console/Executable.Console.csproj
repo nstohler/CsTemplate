@@ -91,14 +91,6 @@
       <Project>{bde09587-6cf3-47cc-87b6-405236c1b242}</Project>
       <Name>Bootstrapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data.Model\Data.Model.csproj">
-      <Project>{f398423a-c026-4080-9a6c-37a7700fb9f7}</Project>
-      <Name>Data.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.Repository.Contracts\Data.Repository.Contracts.csproj">
-      <Project>{0ec1f341-5b4d-4f63-8fed-969d17804e1a}</Project>
-      <Name>Data.Repository.Contracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Engines.Contracts\Engines.Contracts.csproj">
       <Project>{30FEC0BC-4A24-45D8-8D3D-918547B6EF19}</Project>
       <Name>Engines.Contracts</Name>

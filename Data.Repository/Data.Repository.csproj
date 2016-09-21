@@ -67,6 +67,7 @@
     <Compile Include="DatabaseXDbContext.cs">
       <DependentUpon>DatabaseX.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataRepositoryBase.cs" />
     <Compile Include="DataRepositoryFactory.cs" />
     <Compile Include="FakeDatabaseXDbContext.cs">
       <DependentUpon>DatabaseX.tt</DependentUpon>
@@ -101,9 +102,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{4f37e53c-3fb2-4095-a19e-d7b9cefeb723}</Project>
-      <Name>Common</Name>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{d8133425-1a3d-4cf4-98d5-c52ee5c8fa5f}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{29d5bd41-f1f0-4690-a9cf-531136197121}</Project>
+      <Name>Core.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data.Model\Data.Model.csproj">
       <Project>{f398423a-c026-4080-9a6c-37a7700fb9f7}</Project>

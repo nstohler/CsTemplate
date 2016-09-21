@@ -1,4 +1,5 @@
-﻿using Data.Model;
+﻿using Core.Common.Contracts;
+using Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,6 @@ namespace Data.Repository.Contracts.Repository_Interfaces
 {
 	public interface ICustomerRepository : IDataRepository<Customer>
 	{
-		Customer Get(int id);
-
-		IEnumerable<Customer> Get();
-
 		IEnumerable<Customer> GetByCompanyName(string companyName);
 
 		Customer GetWithOrders(int id);

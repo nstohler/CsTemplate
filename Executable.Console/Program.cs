@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Data.Repository.Contracts;
 using LibLog.Common.Logging;
 using Serilog;
 using System;
@@ -8,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EnsureThat;
-using Data.Repository.Contracts.Repository_Interfaces;
 using Engines.Contracts;
 
 namespace Executable.Console
