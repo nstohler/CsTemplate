@@ -16,7 +16,7 @@ namespace Data.Repository
 
     // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class SysdiagramsConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagrams>
+    public class SysdiagramsConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagrams>
     {
         public SysdiagramsConfiguration()
             : this("dbo")
@@ -33,9 +33,7 @@ namespace Data.Repository
             Property(x => x.DiagramId).HasColumnName(@"diagram_id").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.Version).HasColumnName(@"version").IsOptional().HasColumnType("int");
             Property(x => x.Definition).HasColumnName(@"definition").IsOptional().HasColumnType("varbinary");
-            InitializePartial();
         }
-        partial void InitializePartial();
     }
 
 }

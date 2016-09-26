@@ -16,7 +16,7 @@ namespace Data.Repository.Data_Repositories
 		{
 			using (var context = new DatabaseXDbContext())
 			{
-				var query = from c in context.Customer
+				var query = from c in context.Customer.AsNoTracking()
 							where c.CompanyName.Equals(companyName, StringComparison.CurrentCultureIgnoreCase)
 							select c;
 
@@ -28,7 +28,7 @@ namespace Data.Repository.Data_Repositories
 		{
 			using (var context = new DatabaseXDbContext())
 			{
-				var query = from c in context.Customer
+				var query = from c in context.Customer.AsNoTracking()
 							.Include(c => c.Order)
 							where c.CustomerId == id
 							select c;
@@ -49,7 +49,7 @@ namespace Data.Repository.Data_Repositories
 
 		protected override Customer GetEntity(DatabaseXDbContext entityContext, int id)
 		{
-			var query = from o in entityContext.Customer
+			var query = from o in entityContext.Customer.AsNoTracking()
 						where o.CustomerId == id
 						select o;
 
@@ -65,7 +65,7 @@ namespace Data.Repository.Data_Repositories
 
 		protected IEnumerable<Customer> GetEntitiesQueryable(DatabaseXDbContext entityContext)
 		{
-			return from c in entityContext.Customer
+			return from c in entityContext.Customer.AsNoTracking()
 				   select c;
 		}
 	}

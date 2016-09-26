@@ -16,7 +16,7 @@ namespace Data.Repository
 
     // Customer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class CustomerConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Customer>
+    public class CustomerConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Customer>
     {
         public CustomerConfiguration()
             : this("dbo")
@@ -32,9 +32,7 @@ namespace Data.Repository
             Property(x => x.CompanyName).HasColumnName(@"CompanyName").IsRequired().HasColumnType("nvarchar").HasMaxLength(40);
             Property(x => x.ContactName).HasColumnName(@"ContactName").IsOptional().HasColumnType("nvarchar").HasMaxLength(30);
             Property(x => x.Phone).HasColumnName(@"Phone").IsOptional().HasColumnType("nvarchar").HasMaxLength(24);
-            InitializePartial();
         }
-        partial void InitializePartial();
     }
 
 }

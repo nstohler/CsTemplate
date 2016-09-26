@@ -15,7 +15,7 @@ namespace Data.Model
 
     // Customer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class Customer
+    public class Customer
     {
         public int CustomerId { get; set; } // CustomerId (Primary key)
         public string CompanyName { get; set; } // CompanyName (length: 40)
@@ -28,10 +28,7 @@ namespace Data.Model
         public Customer()
         {
             Order = new System.Collections.Generic.List<Order>();
-            InitializePartial();
         }
-
-        partial void InitializePartial();
     }
 
 }

@@ -17,7 +17,7 @@ namespace Data.Repository
     using System.Linq;
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class DatabaseXDbContext : System.Data.Entity.DbContext, IDatabaseXDbContext
+    public class DatabaseXDbContext : Core.Common.Data.DbContextBase, IDatabaseXDbContext
     {
         public System.Data.Entity.DbSet<Customer> Customer { get; set; } // Customer
         public System.Data.Entity.DbSet<Order> Order { get; set; } // Order
@@ -31,31 +31,26 @@ namespace Data.Repository
         public DatabaseXDbContext()
             : base("Name=DatabaseXConnection")
         {
-            InitializePartial();
         }
 
         public DatabaseXDbContext(string connectionString)
             : base(connectionString)
         {
-            InitializePartial();
         }
 
         public DatabaseXDbContext(string connectionString, System.Data.Entity.Infrastructure.DbCompiledModel model)
             : base(connectionString, model)
         {
-            InitializePartial();
         }
 
         public DatabaseXDbContext(System.Data.Common.DbConnection existingConnection, bool contextOwnsConnection)
             : base(existingConnection, contextOwnsConnection)
         {
-            InitializePartial();
         }
 
         public DatabaseXDbContext(System.Data.Common.DbConnection existingConnection, System.Data.Entity.Infrastructure.DbCompiledModel model, bool contextOwnsConnection)
             : base(existingConnection, model, contextOwnsConnection)
         {
-            InitializePartial();
         }
 
         protected override void Dispose(bool disposing)
@@ -79,8 +74,6 @@ namespace Data.Repository
             modelBuilder.Configurations.Add(new CustomerConfiguration());
             modelBuilder.Configurations.Add(new OrderConfiguration());
             modelBuilder.Configurations.Add(new SysdiagramsConfiguration());
-
-            OnModelCreatingPartial(modelBuilder);
         }
 
         public static System.Data.Entity.DbModelBuilder CreateModel(System.Data.Entity.DbModelBuilder modelBuilder, string schema)
@@ -90,9 +83,6 @@ namespace Data.Repository
             modelBuilder.Configurations.Add(new SysdiagramsConfiguration(schema));
             return modelBuilder;
         }
-
-        partial void InitializePartial();
-        partial void OnModelCreatingPartial(System.Data.Entity.DbModelBuilder modelBuilder);
     }
 }
 // </auto-generated>

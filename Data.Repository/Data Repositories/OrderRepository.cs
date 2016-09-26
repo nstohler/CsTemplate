@@ -15,7 +15,7 @@ namespace Data.Repository.Data_Repositories
 		{
 			using (var context = new DatabaseXDbContext())
 			{
-				var query = from o in context.Order
+				var query = from o in context.Order.AsNoTracking()
 							where o.CustomerId == customerId
 							select o;
 
@@ -36,7 +36,7 @@ namespace Data.Repository.Data_Repositories
 
 		protected override Order GetEntity(DatabaseXDbContext entityContext, int id)
 		{
-			var query = from o in entityContext.Order
+			var query = from o in entityContext.Order.AsNoTracking()
 						where o.OrderId == id
 						select o;
 
@@ -52,7 +52,7 @@ namespace Data.Repository.Data_Repositories
 
 		protected IEnumerable<Order> GetEntitiesQueryable(DatabaseXDbContext entityContext)
 		{
-			return from o in entityContext.Order
+			return from o in entityContext.Order.AsNoTracking()
 				   select o;
 		}
 	}

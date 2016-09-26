@@ -15,7 +15,7 @@ namespace Data.Model
 
     // Order
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class Order
+    public class Order
     {
         public int OrderId { get; set; } // OrderId (Primary key)
         public int CustomerId { get; set; } // CustomerId
@@ -24,13 +24,6 @@ namespace Data.Model
 
         // Foreign keys
         public virtual Customer Customer { get; set; } // FK_Order_Customer
-
-        public Order()
-        {
-            InitializePartial();
-        }
-
-        partial void InitializePartial();
     }
 
 }

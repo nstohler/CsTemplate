@@ -50,9 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataRepositoryBase.cs" />
+    <Compile Include="Data\DbContextBase.cs" />
     <Compile Include="Extensions\DataExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\SimpleMapper.cs" />
+    <Compile Include="Util\StaticRefUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

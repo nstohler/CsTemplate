@@ -16,7 +16,7 @@ namespace Data.Repository
 
     // Order
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class OrderConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Order>
+    public class OrderConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Order>
     {
         public OrderConfiguration()
             : this("dbo")
@@ -35,9 +35,7 @@ namespace Data.Repository
 
             // Foreign keys
             HasRequired(a => a.Customer).WithMany(b => b.Order).HasForeignKey(c => c.CustomerId).WillCascadeOnDelete(false); // FK_Order_Customer
-            InitializePartial();
         }
-        partial void InitializePartial();
     }
 
 }

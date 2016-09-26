@@ -17,7 +17,7 @@ namespace Data.Repository
     using System.Linq;
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.24.0.0")]
-    public partial class FakeDatabaseXDbContext : IDatabaseXDbContext
+    public class FakeDatabaseXDbContext : IDatabaseXDbContext
     {
         public System.Data.Entity.DbSet<Customer> Customer { get; set; }
         public System.Data.Entity.DbSet<Order> Order { get; set; }
@@ -28,8 +28,6 @@ namespace Data.Repository
             Customer = new FakeDbSet<Customer>("CustomerId");
             Order = new FakeDbSet<Order>("OrderId");
             Sysdiagrams = new FakeDbSet<Sysdiagrams>("DiagramId");
-
-            InitializePartial();
         }
 
         public int SaveChangesCount { get; private set; }
@@ -50,8 +48,6 @@ namespace Data.Repository
             ++SaveChangesCount;
             return System.Threading.Tasks.Task<int>.Factory.StartNew(() => 1, cancellationToken);
         }
-
-        partial void InitializePartial();
 
         protected virtual void Dispose(bool disposing)
         {
