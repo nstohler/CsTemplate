@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="DataRepositoryBase.cs" />
     <Compile Include="DataRepositoryFactory.cs" />
+    <Compile Include="DemoClass.cs" />
     <Compile Include="FakeDatabaseXDbContext.cs">
       <DependentUpon>DatabaseX.tt</DependentUpon>
     </Compile>
@@ -85,6 +86,7 @@
     <Compile Include="SysdiagramsConfiguration.cs">
       <DependentUpon>DatabaseX.tt</DependentUpon>
     </Compile>
+    <Compile Include="TestDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

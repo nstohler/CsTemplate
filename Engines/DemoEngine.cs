@@ -1,7 +1,11 @@
 ﻿using AppConfiguration;
+using Core.Common.Data.Contracts;
+using Data.Model;
+using Data.Repository;
 using Data.Repository.Contracts.Repository_Interfaces;
 using Engines.Contracts;
 using LibLog.Common.Logging;
+using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +21,19 @@ namespace Engines
 		private readonly IAppConfig _AppConfig;
 		private readonly ICustomerRepository _CustomerRepository;
 		private readonly IOrderRepository _OrderRepository;
+		private readonly IGenericRepository<Customer> _GenericCustomerRepo;
 
-		public DemoEngine(IAppConfig appConfig, ICustomerRepository customerRepository, IOrderRepository orderRepository)
+		public DemoEngine(
+			IAppConfig appConfig, 
+			ICustomerRepository customerRepository, 
+			IOrderRepository orderRepository,
+			IGenericRepository<Customer> genericCustomerRepo
+			)
 		{
-			_AppConfig = appConfig;
-			_CustomerRepository = customerRepository;
-			_OrderRepository = orderRepository;
+			_AppConfig           = appConfig;
+			_CustomerRepository  = customerRepository;
+			_OrderRepository     = orderRepository;
+			_GenericCustomerRepo = genericCustomerRepo;
 		}
 
 		public void Execute()
@@ -42,6 +53,11 @@ namespace Engines
 					_Logger.InfoFormat("  - order ({id}): {quantity}, {date}", order.OrderId, order.OrderQuantity, order.OrderDate?.ToShortDateString());
 				}
 			}
+
+			var genericQuery = _GenericCustomerRepo.FindBy(x => x.CompanyName.Contains("o"));
+			genericQuery.ToList().ForEach(q =>
+				_Logger.InfoFormat("{item}", q.Dump())
+			);
 
 			_Logger.Info("Execute end");
 		}

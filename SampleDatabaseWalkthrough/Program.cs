@@ -8,12 +8,12 @@ using System.Data.Entity;
 
 namespace SampleDatabaseWalkthrough
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            try
-            {
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			try
+			{
 				using (var context = new Data.Repository.DatabaseXDbContext())
 				{
 					var customerSet = from c in context.Customer
@@ -34,13 +34,13 @@ namespace SampleDatabaseWalkthrough
 						//customer.Orders.ToList().ForEach(x => x.PrintDump());
 					}
 				}
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("{0}: {1}", ex.GetType().Name, ex.Message);
-                throw;
-            }
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("{0}: {1}", ex.GetType().Name, ex.Message);
+				throw;
+			}
 
-        }
-    }
+		}
+	}
 }

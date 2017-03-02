@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ServiceStack.Text, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.5.0\lib\net45\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +56,10 @@
       <Project>{D8133425-1A3D-4CF4-98D5-C52EE5C8FA5F}</Project>
       <Name>Core.Common.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core.Common.Data.Contracts\Core.Common.Data.Contracts.csproj">
+      <Project>{fdf658d3-97b9-47ae-a8cb-3b7d58f296ee}</Project>
+      <Name>Core.Common.Data.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data.Model\Data.Model.csproj">
       <Project>{f398423a-c026-4080-9a6c-37a7700fb9f7}</Project>
       <Name>Data.Model</Name>
@@ -68,6 +76,9 @@
       <Project>{a1c460bf-010c-456d-a575-4150c7aa4356}</Project>
       <Name>LibLog.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

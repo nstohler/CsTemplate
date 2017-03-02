@@ -36,6 +36,7 @@ namespace Executable.Console
 			catch (Exception ex)
 			{
 				_Logger.ErrorException("Error", ex);
+				throw;
 			}
 
 		}
